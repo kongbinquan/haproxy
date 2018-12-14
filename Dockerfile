@@ -1,4 +1,4 @@
-FROM kbqallan/alpine:latset
+FROM kbqallan/alpine:latest
 MAINTAINER kbqallan(443831995@qq.com)
 
 ENV VERSION=1.7.9

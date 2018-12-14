@@ -1,0 +1,16 @@
+version: '3'
+services: 
+   haproxy:
+     container_name: haproxy
+     restart: always
+     privileged: true
+     network_mode: host
+     image: kbqallan/alpine-haproxy:1.7.9
+     volumes:
+     - /usr/share/zoneinfo/Etc/GMT-4:/etc/localtime:ro
+     - /etc/haproxy/:/etc/haproxy:rw
+     ports:
+     - 5354:5354
+     environment:
+     - TERM=linux
+
